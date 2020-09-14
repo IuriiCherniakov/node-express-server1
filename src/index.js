@@ -3,12 +3,16 @@ import home from "./home";
 import info from "./info";
 import errorHandler from "./errorHandler";
 import logger from "./logger";
+import parseResponse from "./parseResponse";
+import corse from "./corse";
 
 const app = express();
 const PORT = 5000;
 //localhost:5000/
 
 logger(app);
+parseResponse(app);
+corse(app)
 app.get('/', home);
 app.post('/info', info);
 errorHandler(app);
