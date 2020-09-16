@@ -1,8 +1,8 @@
 import { Router } from "express";
-import info from "./info";
+import userRegister from "./userRegister";
 const router = Router();
 
-router.post('/', info)
-router.get('/', info)
+router.post('/', userRegister) // POST localhost: 5000/user
+
 
 export default router;
